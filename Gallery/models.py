@@ -7,11 +7,11 @@ from django.db.models.base import Model
 class Programs(models.Model):
     ProgramID = models.AutoField(primary_key=True)
     ProgramName = models.CharField(max_length=100)
-    ProgramDesc = models.CharField(max_length=1000)
+    ProgramDesc = models.TextFiled(default="")
     ProgramDate = models.DateField()
 
     image = models.FileField(blank=True, upload_to='programs/images/')
-    type = models.CharField(max_length=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")),default="EOC")
+    type = models.CharField(max_length=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")), default="EOC")
 
     def __str__(self):
         return self.ProgramName
