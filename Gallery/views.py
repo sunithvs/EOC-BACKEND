@@ -27,7 +27,7 @@ class ProgramApiViewSet(viewsets.ModelViewSet, generics.GenericAPIView):
 
 class MentorApiViewSet(viewsets.ModelViewSet, generics.GenericAPIView):
     queryset = Mentor.objects.all().all()
-    serializer_class = GallerySerializer
+    serializer_class = MentorSerializer
     http_method_names = ["get"]
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['type']
