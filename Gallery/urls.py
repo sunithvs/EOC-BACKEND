@@ -6,7 +6,7 @@ from Gallery import views
 
 router = DefaultRouter()
 
-router.register("programs/", views.ProgramApiViewSet)
+router.register("programs", views.ProgramApiViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
