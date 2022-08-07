@@ -23,3 +23,9 @@ class PostImage(models.Model):
 
     def __str__(self):
         return self.post.ProgramName
+
+
+class Mentor(models.Model):
+    name = models.CharField(max_length=50)
+    designation = models.CharField(max_length=40)
+    type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty")))
