@@ -15,23 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('eocAdmin/', admin.site.urls),
-    url(r'^',include('news.urls')),
-    url(r'^',include('Gallery.urls')),
-    url(r'^',include('Innovation.urls')),
-    url(r'^',include('Carousel.urls')),
-    path('', include('frontend.urls')),
-    
-    
+    url(r'^', include('news.urls')),
+    url(r'^', include('Gallery.urls')),
+    url(r'^', include('Innovation.urls')),
+    url(r'^', include('Carousel.urls')),
+
 ]
 
 admin.site.site_header = "EOC Admin"
 admin.site.site_title = "EOC Admin Portal"
 admin.site.index_title = "Equal Opportunity Cell Admin Portal"
 
-urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
