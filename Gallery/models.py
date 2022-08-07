@@ -11,7 +11,7 @@ class Programs(models.Model):
     ProgramDate = models.DateField()
 
     image = models.FileField(blank=True, upload_to='programs/images/')
-    type = models.CharField(max_lngth=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")),defalt="EOC")
+    type = models.CharField(max_length=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")),defalt="EOC")
 
     def __str__(self):
         return self.ProgramName
