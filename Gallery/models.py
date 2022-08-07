@@ -8,7 +8,7 @@ class Programs(models.Model):
     ProgramID = models.AutoField(primary_key=True)
     ProgramName = models.CharField(max_length=100)
     ProgramDesc = models.CharField(max_length=100, default="")
-    long_description = models.TextFiled(default="")
+    long_description = models.TextField(default="")
     ProgramDate = models.DateField()
 
     image = models.FileField(blank=True, upload_to='programs/images/')
