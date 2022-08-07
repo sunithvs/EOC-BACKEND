@@ -7,7 +7,8 @@ from django.db.models.base import Model
 class Programs(models.Model):
     ProgramID = models.AutoField(primary_key=True)
     ProgramName = models.CharField(max_length=100)
-    ProgramDesc = models.TextFiled(default="")
+    ProgramDesc = models.CharFiled(max_length=100, default="")
+    long_description = models.TextFiled(default="")
     ProgramDate = models.DateField()
 
     image = models.FileField(blank=True, upload_to='programs/images/')
