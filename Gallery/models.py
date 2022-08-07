@@ -28,5 +28,6 @@ class PostImage(models.Model):
 class Mentor(models.Model):
     name = models.CharField(max_length=50)
     designation = models.CharField(max_length=40)
-    type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty")))
+    type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty"), ("Student", "Student")),
+                            max_length=20)
     image = models.ImageField(upload_to="programs/images/")
