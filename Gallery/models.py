@@ -8,8 +8,9 @@ class Programs(models.Model):
     ProgramID = models.AutoField(primary_key=True)
     ProgramName = models.CharField(max_length=100)
     ProgramDesc = models.CharField(max_length=100, default="", blank=True, null=True)
-    ProgramDate = models.DateField(blank=True,null=True)
-    long_desc = models.TextField(default="",blank=True,null=True)
+    ProgramDate = models.DateField(blank=True, null=True)
+    long_desc = models.TextField(default="", blank=True, null=True)
+    video = models.FileField(upload_to="videos")
 
     image = models.FileField(blank=True, upload_to='programs/images/')
     type = models.CharField(max_length=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")), default="EOC")
