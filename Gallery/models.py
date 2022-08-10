@@ -10,7 +10,8 @@ class Programs(models.Model):
     ProgramDesc = models.CharField(max_length=100, default="", blank=True, null=True)
     ProgramDate = models.DateField(blank=True, null=True)
     long_desc = models.TextField(default="", blank=True, null=True)
-    video = models.FileField(upload_to="videos",blank=True,null=True)
+    video = models.FileField(upload_to="videos", blank=True, null=True)
+    video_url = models.CharField(max_length=15, blank=True, null=True)
 
     image = models.FileField(blank=True, upload_to='programs/images/')
     type = models.CharField(max_length=200, choices=(("EOC", "EOC"), ("SOCE", "SOCE")), default="EOC")
@@ -30,6 +31,7 @@ class PostImage(models.Model):
 class Mentor(models.Model):
     name = models.CharField(max_length=50)
     designation = models.CharField(max_length=40)
+    area_or_expertise = models.CharField(max_length=100, blank=True, null=True)
     type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty"), ("Student", "Student")),
                             max_length=20)
     image = models.ImageField(upload_to="programs/images/")
