@@ -7,7 +7,7 @@ class Innovation(models.Model):
     InnovationID = models.AutoField(primary_key=True)
     InnovationName =models.CharField(max_length=100)
     InnovationShortDesc = models.CharField(max_length=150)
-    InnovationDesc = models.TextField(max_length=2000)
+    InnovationDesc = models.TextField(blank=True,null=True)
     InnovationLink = models.CharField(max_length=300,default='#')
     InnovationYBLink = models.CharField(max_length=200,default='#')
     InnovationDate = models.DateField(blan=True,null=True)
