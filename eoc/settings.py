@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'Innovation.apps.InnovationConfig',
     'Carousel.apps.CarouselConfig',
     # 'frontend.apps.FrontendConfig'
+    'ckeditor',
 
 ]
 

@@ -1,13 +1,13 @@
 from django.db import models
 from django.db.models.base import Model
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Innovation(models.Model):
     InnovationID = models.AutoField(primary_key=True)
     InnovationName =models.CharField(max_length=100)
     InnovationShortDesc = models.CharField(max_length=150)
-    InnovationDesc = models.TextField(blank=True,null=True)
+    InnovationDesc = RichTextField(blank=True,null=True)
     InnovationLink = models.CharField(max_length=300,default='#')
     InnovationYBLink = models.CharField(max_length=200,default='#')
     InnovationDate = models.DateField(blank=True,null=True)
