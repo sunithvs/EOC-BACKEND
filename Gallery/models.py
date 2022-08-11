@@ -32,7 +32,7 @@ class Mentor(models.Model):
     name = models.CharField(max_length=50)
     designation = models.CharField(max_length=40)
     area_or_expertise = models.CharField(max_length=100, blank=True, null=True)
-    type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty"), ("Student", "Student")),
+    type = models.CharField(choices=(("Alumni", "Alumni"), ("Faculty", "Faculty"), ("Student", "Student"),("Other", "Other")),
                             max_length=20)
     image = models.ImageField(upload_to="programs/images/")
 
