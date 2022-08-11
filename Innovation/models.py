@@ -10,7 +10,7 @@ class Innovation(models.Model):
     InnovationDesc = models.TextField(blank=True,null=True)
     InnovationLink = models.CharField(max_length=300,default='#')
     InnovationYBLink = models.CharField(max_length=200,default='#')
-    InnovationDate = models.DateField(blan=True,null=True)
+    InnovationDate = models.DateField(blank=True,null=True)
     
     image = models.FileField(blank=True,upload_to='programs/innovations/')
 

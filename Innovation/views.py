@@ -7,10 +7,8 @@ from Innovation.models import Innovation
 
 from Innovation.serializers import InnovationSerializer
 
-
-@csrf_exempt
-def InnovationApi(request):
-    if request.method == 'GET':
-        posts = Innovation.objects.all()
-        post_serializer = InnovationSerializer(posts,many=True)
-        return JsonResponse(post_serializer.data,safe=False)
+class InnovationApiViewSet(viewsets.ModelViewSet, generics.GenericAPIView):
+    queryset = Innovation.objects.all()
+    serializer_class = InnovationSerializer
+    http_method_names = ["get"]
+ 
