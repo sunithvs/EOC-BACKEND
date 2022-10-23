@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Carousel.apps.CarouselConfig',
     # 'frontend.apps.FrontendConfig'
     'ckeditor',
+    "activities",
 
 ]
 
