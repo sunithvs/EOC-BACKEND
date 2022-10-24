@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^', include('news.urls')),
     url(r'^', include('Gallery.urls')),
     url(r'^', include('Innovation.urls')),
+    url(r'^', include('activities.urls')),
     url(r'^', include('Carousel.urls')),
 
 ]

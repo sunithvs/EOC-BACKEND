@@ -5,8 +5,7 @@ from activities.models import Activity
 from activities.serializers import ActivitySerializer
 
 
-
-class InnovationApiViewSet(viewsets.ModelViewSet, generics.GenericAPIView):
+class ActivityApiViewSet(viewsets.ModelViewSet, generics.GenericAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
     http_method_names = ["get"]
