@@ -11,7 +11,11 @@ class ActivityImagesSerializer(serializers.ModelSerializer):
 
 class ActivitySerializer(serializers.ModelSerializer):
     inoimages = ActivityImagesSerializer(many=True, read_only=True)
+    InnovationID = serializers.SerializerMethodField()
 
     class Meta:
         model = Activity
-        fields = ["name", "short_desc", "description", "link", "date", "image", "inoimages"]
+        fields = ['id', "InnovationID", "name", "short_desc", "description", "link", "date", "image", "inoimages"]
+
+    def get_InnovationID(self, obj):
+        return obj.id
