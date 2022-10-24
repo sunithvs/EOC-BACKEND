@@ -17,5 +17,4 @@ class InnovationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Innovation
         fields = (
-        "InnovationID", "InnovationName", "InnovationShortDesc", "InnovationDesc", "InnovationLink", "InnovationYBLink",
-        "InnovationDate", "image", 'inoimages')
+            "InnovationID", "name", "short_desc", "description", "link", "date", "image" 'inoimages')
