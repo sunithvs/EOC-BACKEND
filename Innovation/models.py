@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Innovation(models.Model):
-    # InnovationID = models.AutoField(primary_key=True)
+    InnovationID = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     InnovationShortDesc = models.CharField(max_length=150)
     InnovationDesc = RichTextField(blank=True, null=True)
