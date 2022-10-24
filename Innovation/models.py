@@ -8,9 +8,9 @@ from ckeditor.fields import RichTextField
 class Innovation(models.Model):
     InnovationID = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
-    InnovationShortDesc = models.CharField(max_length=150)
-    InnovationDesc = RichTextField(blank=True, null=True)
-    InnovationLink = models.CharField(max_length=300, default='#')
+    short_desc = models.CharField(max_length=150)
+    description = RichTextField(blank=True, null=True)
+    link = models.CharField(max_length=300, default='#')
     InnovationYBLink = models.CharField(max_length=200, default='#')
     InnovationDate = models.DateField(blank=True, null=True)
 
