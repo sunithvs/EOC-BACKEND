@@ -16,3 +16,11 @@ class Activity(models.Model):
 
     class Meta:
         verbose_name = "Activities"
+
+
+class ActivityImage(models.Model):
+    activity = models.ForeignKey(Activity, default=None, on_delete=models.CASCADE, related_name='inoimages')
+    images = models.FileField(upload_to='programs/innovations/', )
+
+    def __str__(self):
+        return self.activity.name

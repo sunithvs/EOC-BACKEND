@@ -12,12 +12,12 @@ class Innovation(models.Model):
     description = RichTextField(blank=True, null=True)
     link = models.CharField(max_length=300, default='#')
     InnovationYBLink = models.CharField(max_length=200, default='#')
-    InnovationDate = models.DateField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
 
     image = models.FileField(blank=True, upload_to='programs/innovations/')
 
     def __str__(self):
-        return self.InnovationName
+        return self.name
 
 
 class InnovativeImages(models.Model):
@@ -25,4 +25,4 @@ class InnovativeImages(models.Model):
     images = models.FileField(upload_to='programs/innovations/', )
 
     def __str__(self):
-        return self.InoIMG.InnovationName
+        return self.InoIMG.name
