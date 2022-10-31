@@ -1,4 +1,4 @@
-#### configuring for React app to Django
+### configuring for React app to Django
 
 + from the React Build dir copy the index.html  to Django Template dir 
 + copy rest of the contents in React build folder to Django static dir 
