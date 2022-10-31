@@ -1,5 +1,5 @@
 
-### Configuring for React app to Django
+## Configuring for React app to Django
 
 ## configuring for React app to Django
 
